@@ -10,8 +10,8 @@ LD86	=ld86 -0
 AS	=as
 LD	=ld
 LDFLAGS	=-m elf_i386 -Ttext 0 -e startup_32
-CC	=gcc-3.4 -march=i386 $(RAMDISK)
-CFLAGS	=-m32 -g -Wall -O2 -fomit-frame-pointer 
+CC	=gcc -march=i386 $(RAMDISK)
+CFLAGS	=-m32 -g -Wall -O2 -fomit-frame-pointer -fno-stack-protector
 
 CPP	=cpp -nostdinc -Iinclude
 
@@ -59,7 +59,7 @@ tools/build: tools/build.c
 	-o tools/build tools/build.c
 
 boot/head.o: boot/head.s
-	gcc-3.4 -m32 -g -I./include -traditional -c boot/head.s
+	gcc -m32 -g -I./include -traditional -c boot/head.s
 	mv head.o boot/
 
 tools/system:	boot/head.o init/main.o \

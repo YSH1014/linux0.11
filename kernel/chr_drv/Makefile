@@ -10,10 +10,10 @@ AR	=ar
 AS	=as --32
 LD	=ld
 LDFLAGS	=-m elf_i386 -x
-CC	=gcc-3.4 -march=i386
+CC	=gcc -march=i386
 CFLAGS	=-m32 -g -Wall -O -fstrength-reduce -fomit-frame-pointer \
-	-finline-functions -nostdinc -I../../include
-CPP	=gcc-3.4 -m32 -g -E -nostdinc -I../../include
+	-finline-functions -nostdinc -I../../include -fno-stack-protector
+CPP	=gcc -m32 -g -E -nostdinc -I../../include
 
 .c.s:
 	$(CC) $(CFLAGS) \
@@ -31,8 +31,8 @@ chr_drv.a: $(OBJS)
 	$(AR) rcs chr_drv.a $(OBJS)
 	sync
 
-keyboard.s: keyboard.S ../../include/linux/config.h
-	$(CPP) -traditional keyboard.S -o keyboard.s
+keyboard.s: k.S ../../include/linux/config.h
+	$(CPP) -traditional k.S -o keyboard.s
 
 clean:
 	rm -f core *.o *.a tmp_make keyboard.s

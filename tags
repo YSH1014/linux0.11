@@ -53,14 +53,14 @@ BSDLY	include/termios.h	121;"	d
 BUFFER_END	include/const.h	4;"	d
 BUSY_STAT	include/linux/hdreg.h	31;"	d
 CBAUD	include/termios.h	132;"	d
-CC	Makefile	/^CC	=gcc-3.4 -march=i386 $(RAMDISK)$/;"	m
-CC	fs/Makefile	/^CC	=gcc-3.4 -march=i386$/;"	m
-CC	kernel/Makefile	/^CC	=gcc-3.4 -march=i386$/;"	m
-CC	kernel/blk_drv/Makefile	/^CC	=gcc-3.4 -march=i386$/;"	m
-CC	kernel/chr_drv/Makefile	/^CC	=gcc-3.4 -march=i386$/;"	m
-CC	kernel/math/Makefile	/^CC	=gcc-3.4 -march=i386$/;"	m
-CC	lib/Makefile	/^CC	=gcc-3.4 -march=i386$/;"	m
-CC	mm/Makefile	/^CC	=gcc-3.4 -march=i386$/;"	m
+CC	Makefile	/^CC	=gcc -march=i386 $(RAMDISK)$/;"	m
+CC	fs/Makefile	/^CC	=gcc -march=i386$/;"	m
+CC	kernel/Makefile	/^CC	=gcc -march=i386$/;"	m
+CC	kernel/blk_drv/Makefile	/^CC	=gcc -march=i386$/;"	m
+CC	kernel/chr_drv/Makefile	/^CC	=gcc -march=i386$/;"	m
+CC	kernel/math/Makefile	/^CC	=gcc -march=i386$/;"	m
+CC	lib/Makefile	/^CC	=gcc -march=i386$/;"	m
+CC	mm/Makefile	/^CC	=gcc -march=i386$/;"	m
 CFLAGS	Makefile	/^CFLAGS	= -g -Wall -O2 -fomit-frame-pointer $/;"	m
 CFLAGS	fs/Makefile	/^CFLAGS	= -g -Wall -fstrength-reduce -fomit-frame-pointer \\$/;"	m
 CFLAGS	kernel/Makefile	/^CFLAGS	= -g -Wall -O -fstrength-reduce -fomit-frame-pointer \\$/;"	m
@@ -80,13 +80,13 @@ COPYBLK	fs/buffer.c	286;"	d	file:
 CPARENB	include/termios.h	158;"	d
 CPARODD	include/termios.h	159;"	d
 CPP	Makefile	/^CPP	=cpp -nostdinc -Iinclude$/;"	m
-CPP	fs/Makefile	/^CPP	=gcc-3.4 -E -nostdinc -I..\/include$/;"	m
-CPP	kernel/Makefile	/^CPP	=gcc-3.4 -E -nostdinc -I..\/include$/;"	m
-CPP	kernel/blk_drv/Makefile	/^CPP	=gcc-3.4 -E -nostdinc -I..\/..\/include$/;"	m
-CPP	kernel/chr_drv/Makefile	/^CPP	=gcc-3.4 -E -nostdinc -I..\/..\/include$/;"	m
-CPP	kernel/math/Makefile	/^CPP	=gcc-3.4 -E -nostdinc -I..\/..\/include$/;"	m
-CPP	lib/Makefile	/^CPP	=gcc-3.4 -E -nostdinc -I..\/include$/;"	m
-CPP	mm/Makefile	/^CPP	=gcc-3.4 -E -nostdinc -I..\/include$/;"	m
+CPP	fs/Makefile	/^CPP	=gcc -E -nostdinc -I..\/include$/;"	m
+CPP	kernel/Makefile	/^CPP	=gcc -E -nostdinc -I..\/include$/;"	m
+CPP	kernel/blk_drv/Makefile	/^CPP	=gcc -E -nostdinc -I..\/..\/include$/;"	m
+CPP	kernel/chr_drv/Makefile	/^CPP	=gcc -E -nostdinc -I..\/..\/include$/;"	m
+CPP	kernel/math/Makefile	/^CPP	=gcc -E -nostdinc -I..\/..\/include$/;"	m
+CPP	lib/Makefile	/^CPP	=gcc -E -nostdinc -I..\/include$/;"	m
+CPP	mm/Makefile	/^CPP	=gcc -E -nostdinc -I..\/include$/;"	m
 CR0	include/termios.h	111;"	d
 CR1	include/termios.h	112;"	d
 CR2	include/termios.h	113;"	d

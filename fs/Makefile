@@ -1,10 +1,10 @@
 AR	=ar
 AS	=as
-CC	=gcc-3.4 -march=i386
+CC	=gcc -march=i386
 LD	=ld
 CFLAGS	=-m32 -g -Wall -fstrength-reduce -fomit-frame-pointer \
-	 -nostdinc -I../include
-CPP	=gcc-3.4 -E -nostdinc -I../include
+	 -nostdinc -I../include -fno-stack-protector
+CPP	=gcc -E -nostdinc -I../include
 
 .c.s:
 	$(CC) $(CFLAGS) \

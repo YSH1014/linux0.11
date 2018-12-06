@@ -1,11 +1,11 @@
-CC	=gcc-3.4 -march=i386
+CC	=gcc -march=i386
 CFLAGS	=-m32 -g -Wall -O -fstrength-reduce -fomit-frame-pointer \
-	-finline-functions -nostdinc -I../include
+	-finline-functions -nostdinc -I../include -fno-stack-protector
 AS	=as --32
 AR	=ar
 LD	=ld
 LDFLAGS =-m elf_i386
-CPP	=gcc-3.4 -E -nostdinc -I../include
+CPP	=gcc -E -nostdinc -I../include
 
 .c.o:
 	$(CC) $(CFLAGS) \
